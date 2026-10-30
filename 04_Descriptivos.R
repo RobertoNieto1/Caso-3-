@@ -87,31 +87,13 @@ print(round(correlaciones["Sales", ], 3))
 write.csv(round(correlaciones, 3), "tables/p4_correlaciones.csv")
 
 # CONCLUSIONES DEL PUNTO 4
-#
-# El analisis de las 135 semanas evidencia una alta variabilidad
-# de la demanda, con picos pronunciados de Sales y Orders en
-# diciembre de 2024 y 2025. Las ventas semanales promedian
-# 7,26 millones de dolares, con una desviacion estandar de
-# 6,56 millones y un maximo de 36,77 millones, lo que refleja
-# la importancia de las semanas de mayor demanda en los resultados.
-#
-# Los graficos muestran que la inversion publicitaria tambien
-# aumenta durante estos picos; ademas, Search presenta un periodo
-# inicial sin inversion en 2024, aspecto que debe considerarse
-# al comparar los canales.
-#
-# Las ventas tienen asociaciones positivas con los costos de
-# Sponsored (r = 0,740), Search (r = 0,738) y DSP (r = 0,536),
-# y la mayor correlacion con las impresiones corresponde a
-# Search (r = 0,793). En contraste, las asociaciones con los
-# controles externos son mas debiles o negativas, especialmente
-# con Brand (r = -0,454), NonBrand (r = -0,405) y el precio de
-# la gasolina (r = -0,348).
-#
-# Sales y Orders presentan una correlacion que redondea a 1,
-# coherente con su comportamiento temporal casi identico.
-# En conjunto, estos resultados sugieren considerar los picos
-# de demanda y el movimiento conjunto de la inversion al
-# interpretar las regresiones posteriores: las correlaciones
-# describen asociaciones en la muestra, pero no demuestran que
-# la publicidad o los controles causen cambios en las ventas.
+# Las 135 semanas muestran una demanda muy variable, con picos
+# de ventas y ordenes en diciembre de 2024 y 2025, coincidiendo
+# con aumentos de la inversion publicitaria. Las ventas se
+# relacionan positivamente con los costos de los tres canales,
+# especialmente Search y Sponsored, mientras que los controles
+# externos presentan asociaciones mas debiles o negativas.
+# Sales y Orders tienen un comportamiento casi identico.
+# Tambien debe considerarse que Search tuvo un periodo inicial
+# sin inversion en 2024. Estas relaciones describen la muestra,
+# pero no demuestran efectos causales de la publicidad.
