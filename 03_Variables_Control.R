@@ -2,7 +2,7 @@
 # PUNTO 3: VARIABLES DE CONTROL EXTERNAS
 
 # Importar la base ampliada de Amazon
-datos <- read.csv("Base_RentCar_Amazon.csv",
+datos <- read.csv("tables/Base_RentCar_Amazon.csv",
                   check.names = FALSE)
 
 # Revisar dimensiones
@@ -28,7 +28,7 @@ range(as.Date(datos$Week))
 # Fecha de consulta: 30 de octubre de 2026.
 
 # Importar tasa de desempleo de Estados Unidos
-UNRATE <- read.csv("UNRATE.csv")
+UNRATE <- read.csv("raw/UNRATE.csv")
 
 # Convertir las fechas de UNRATE
 UNRATE$observation_date <- as.Date(
@@ -186,7 +186,7 @@ sum(is.na(datos$UNRATE_Control))
 # Fecha de consulta: 30 de octubre de 2026.
 
 # Importar precio de gasolina de Estados Unidos
-GASREGW <- read.csv("GASREGW.csv")
+GASREGW <- read.csv("raw/GASREGW.csv")
 
 # Convertir las fechas de gasolina
 GASREGW$observation_date <- as.Date(
@@ -225,7 +225,7 @@ sum(is.na(datos$GASREGW_Control))
 
 # Primera descarga: enero a junio de 2024
 trends_nonbrand_1 <- read.csv(
-  "Trends_NonBrand_EneJun2024.csv.csv",
+  "raw/Trends_NonBrand_EneJun2024.csv.csv",
   skip = 1,
   header = FALSE,
   col.names = c("Week", "NonBrand"),
@@ -242,7 +242,7 @@ trends_nonbrand_1$NonBrand <- as.numeric(
 
 # Segunda descarga: junio de 2024 a agosto de 2026
 trends_nonbrand_2 <- read.csv(
-  "Trends_NonBrand_Jun2024_Ago2026.csv",
+  "raw/Trends_NonBrand_Jun2024_Ago2026.csv",
   skip = 1,
   header = FALSE,
   col.names = c("Week", "NonBrand"),
@@ -291,7 +291,7 @@ trends_nonbrand_unido <- trends_nonbrand_unido[
 
 # Tercera descarga: enero a agosto de 2026
 trends_nonbrand_3 <- read.csv(
-  "Trends_NonBrand_2026.csv",
+  "raw/Trends_NonBrand_2026.csv",
   skip = 1,
   header = FALSE,
   col.names = c("Week", "NonBrand"),
@@ -368,7 +368,7 @@ sum(is.na(datos$NonBrand))
 
 # Brand 2024
 brand_2024 <- read.csv(
-  "Trends_Brand_2024.csv",
+  "raw/Trends_Brand_2024.csv",
   skip = 1,
   header = FALSE,
   col.names = c("Week", "Brand"),
@@ -379,7 +379,7 @@ brand_2024$Week <- as.Date(brand_2024$Week)
 
 # Brand 2025
 brand_2025 <- read.csv(
-  "Trends_Brand_2025.csv",
+  "raw/Trends_Brand_2025.csv",
   skip = 1,
   header = FALSE,
   col.names = c("Week", "Brand"),
@@ -418,7 +418,7 @@ brand_unido <- brand_unido[
 
 # Brand 2026
 brand_2026 <- read.csv(
-  "Trends_Brand_2026.csv",
+  "raw/Trends_Brand_2026.csv",
   skip = 1,
   header = FALSE,
   col.names = c("Week", "Brand"),
@@ -500,9 +500,9 @@ range(as.Date(datos$Week))
 # Guardar base final con las cuatro variables externas
 write.csv(
   datos,
-  "Base_RentCar_Final.csv",
+  "tables/Base_RentCar_Final.csv",
   row.names = FALSE
 )
 
 # Comprobar que el archivo se creo
-file.exists("Base_RentCar_Final.csv")
+file.exists("tables/Base_RentCar_Final.csv")

@@ -2,7 +2,7 @@
 # PUNTO 1: RECONOCIMIENTO DE LA BASE
 
 # Importar la base de datos original
-datos <- read.csv("Base_datos_caso_3.csv",
+datos <- read.csv("raw/Base_datos_caso_3.csv",
                   check.names = FALSE)
 
 # Revisar dimensiones

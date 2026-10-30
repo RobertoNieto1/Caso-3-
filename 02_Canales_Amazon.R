@@ -2,7 +2,7 @@
 # PUNTO 2: CONSTRUCCION DE CANALES AMAZON
 
 # Importar la base original
-datos <- read.csv("Base_datos_caso_3.csv",
+datos <- read.csv("raw/Base_datos_caso_3.csv",
                   check.names = FALSE)
 
 # Identificar las campañas de Amazon por prefijo
@@ -101,9 +101,9 @@ for (canal in c("DSP", "Search", "Sponsored")) {
 # Guardar base con los canales de Amazon (unico bloque de guardado)
 write.csv(
   datos,
-  "Base_RentCar_Amazon.csv",
+  "tables/Base_RentCar_Amazon.csv",
   row.names = FALSE
 )
 
 # Comprobar que el archivo se guardo
-file.exists("Base_RentCar_Amazon.csv")
+file.exists("tables/Base_RentCar_Amazon.csv")

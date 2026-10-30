@@ -1,7 +1,7 @@
 # CASO 3 - RENT CAR
 # PUNTO 6: REGRESION MULTIPLE CON CONTROLES
 
-datos <- read.csv("Base_RentCar_Final.csv",
+datos <- read.csv("tables/Base_RentCar_Final.csv",
                   check.names = FALSE)
 
 # ---------------------------------------------------------

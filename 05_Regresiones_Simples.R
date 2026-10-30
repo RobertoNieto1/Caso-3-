@@ -1,7 +1,7 @@
 # CASO 3 - RENT CAR
 # PUNTO 5: REGRESIONES SIMPLES - UNA PRIMERA LECTURA
 
-datos <- read.csv("Base_RentCar_Final.csv",
+datos <- read.csv("tables/Base_RentCar_Final.csv",
                   check.names = FALSE)
 
 # Modelo 1a: Sales ~ costo de Amazon DSP

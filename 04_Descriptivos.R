@@ -1,7 +1,7 @@
 # CASO 3 - RENT CAR
 # PUNTO 4: EXPLORACION Y ESTADISTICAS DESCRIPTIVAS
 
-datos <- read.csv("Base_RentCar_Final.csv",
+datos <- read.csv("tables/Base_RentCar_Final.csv",
                   check.names = FALSE)
 datos$Week <- as.Date(datos$Week)
 
