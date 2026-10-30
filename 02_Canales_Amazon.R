@@ -1,10 +1,12 @@
 
 # CASO 3 - RENT CAR
 # PUNTO 2: CONSTRUCCION DE CANALES AMAZON
+setwd("C:/Users/USUARIO/Documents/GitHub/Caso-3-")
+ruta = setwd("C:/Users/USUARIO/Documents/GitHub/Caso-3-")
 
 # Importar la base original
 datos <- read.csv(
-  "Base_datos_caso_3 (1) (1).csv",
+  "Base_datos_caso_3.csv",
   check.names = FALSE
 )
 
@@ -96,8 +98,6 @@ columnas_amazon <- c(
 # Mostrar resultados de ambas semanas
 print(datos[1:2, columnas_amazon])
 
-
-
 # Comprobacion de sumas para dos semanas
 
 # Seleccionar las dos primeras semanas
@@ -156,29 +156,17 @@ file.exists("Base_RentCar_Amazon.csv")
 # Guardar la base ampliada en el repositorio de GitHub
 write.csv(
   datos,
-  "~/Downloads/Caso-3-/Base_RentCar_Amazon.csv",
+  ruta,
   row.names = FALSE
 )
 
 # Verificar que se guardo
-file.exists("~/Downloads/Caso-3-/Base_RentCar_Amazon.csv")
-
-
-
-# Seleccionar carpeta del repositorio GitHub
-carpeta_github <- file.choose()
-
-# Mostrar la ruta seleccionada
-carpeta_github
-
-
-# Obtener la carpeta del repositorio
-ruta_repositorio <- dirname(carpeta_github)
+file.exists(ruta)
 
 # Guardar la base ampliada en GitHub
 write.csv(
   datos,
-  file.path(ruta_repositorio, "Base_RentCar_Amazon.csv"),
+  file.path(ruta, "Base_RentCar_Amazon.csv"),
   row.names = FALSE
 )
 

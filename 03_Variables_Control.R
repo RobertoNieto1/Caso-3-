@@ -1,10 +1,12 @@
 
 # CASO 3 - RENT CAR
 # PUNTO 3: VARIABLES DE CONTROL EXTERNAS
+setwd("C:/Users/USUARIO/Documents/GitHub/Caso-3-")
+ruta = setwd("C:/Users/USUARIO/Documents/GitHub/Caso-3-")
 
 # Importar la base ampliada de Amazon
 datos <- read.csv(
-  file.choose(),
+  "Base_RentCar_Amazon.csv",
   check.names = FALSE
 )
 

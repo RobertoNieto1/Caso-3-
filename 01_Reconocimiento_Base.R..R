@@ -1,9 +1,10 @@
 
 # CASO 3 - RENT CAR
 # PUNTO 1: RECONOCIMIENTO DE LA BASE
+setwd("C:/Users/USUARIO/Documents/GitHub/Caso-3-")
 
 # Importar la base de datos original
-datos <- read.csv("Base_datos_caso_3 (1) (1).csv",
+datos <- read.csv("Base_datos_caso_3.csv",
                   check.names = FALSE)
 
 # Revisar dimensiones
@@ -71,7 +72,3 @@ sum(duplicated(datos))
 # Comprobar que las fechas estén cada 7 días
 fechas <- sort(as.Date(datos$Week))
 table(as.numeric(diff(fechas)))
-
-
-
-
