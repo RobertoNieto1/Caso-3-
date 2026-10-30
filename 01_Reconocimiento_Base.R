@@ -1,12 +1,5 @@
 # CASO 3 - RENT CAR
 # PUNTO 1: RECONOCIMIENTO DE LA BASE
-#
-# Entrada: Base_datos_caso_3.csv (en la carpeta del proyecto)
-# Salida: ninguna; este script solo explora y deja el registro de ajustes
-#
-# Antes de correr: abrir R o RStudio con la carpeta del repositorio como
-# directorio de trabajo (Session > Set Working Directory, o un .Rproj).
-# No usar setwd() con rutas fijas: esas rutas solo existen en un equipo.
 
 # Importar la base de datos original
 datos <- read.csv("Base_datos_caso_3.csv",
