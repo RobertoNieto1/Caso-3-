@@ -15,6 +15,17 @@ range(as.Date(datos$Week))
 # ============================================================
 # UNRATE: tasa de desempleo de Estados Unidos (FRED/BLS)
 # ============================================================
+# UNRATE - Tasa de desempleo de Estados Unidos
+# Fuente original: U.S. Bureau of Labor Statistics (BLS).
+# Disponible en FRED, Federal Reserve Bank of St. Louis.
+# Serie: UNRATE.
+# Unidades: porcentaje, ajustada por estacionalidad.
+# Frecuencia original: mensual.
+# Cobertura: Estados Unidos.
+# Referencia: U.S. Bureau of Labor Statistics, Unemployment Rate
+# [UNRATE], FRED, Federal Reserve Bank of St. Louis.
+# https://fred.stlouisfed.org/series/UNRATE
+# Fecha de consulta: 30 de octubre de 2026.
 
 # Importar tasa de desempleo de Estados Unidos
 UNRATE <- read.csv("UNRATE.csv")
@@ -161,6 +172,18 @@ sum(is.na(datos$UNRATE_Control))
 # ============================================================
 # GASREGW: precio de la gasolina regular (FRED/EIA)
 # ============================================================
+# GASREGW - Precio de la gasolina regular en Estados Unidos
+# Fuente original: U.S. Energy Information Administration (EIA).
+# Disponible en FRED, Federal Reserve Bank of St. Louis.
+# Serie: GASREGW.
+# Unidades: dolares estadounidenses por galon, sin ajuste estacional.
+# Frecuencia original: semanal, con fecha de lunes.
+# Cobertura: Estados Unidos.
+# Referencia: U.S. Energy Information Administration, US Regular
+# All Formulations Gas Price [GASREGW], FRED, Federal Reserve
+# Bank of St. Louis.
+# https://fred.stlouisfed.org/series/GASREGW
+# Fecha de consulta: 30 de octubre de 2026.
 
 # Importar precio de gasolina de Estados Unidos
 GASREGW <- read.csv("GASREGW.csv")
